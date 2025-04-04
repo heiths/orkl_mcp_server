@@ -22,7 +22,9 @@ A MCP (Model Control Protocol) server for accessing the [ORKL Threat Intelligenc
 - Standardized MCP Tools and Resources for LLM interaction
 - Built-in support for Claude Desktop integration
 
-![claude_desktop_screenshot](docs/img/claude_desktop_screenshot.png)
+Screenshot
+
+<img src="docs/img/claude_desktop_screenshot.png" width="500" >
 
 ## Getting Started
 
@@ -31,11 +33,25 @@ A MCP (Model Control Protocol) server for accessing the [ORKL Threat Intelligenc
 - Python 3.10 or later
 - [uv](https://github.com/astral-sh/uv) package manager (recommended)
 
-### Installation
+#### Installation
 
-#### Quick Start with Claude Desktop
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/heiths/orkl_mcp_server.git
+   cd orkl_mcp_server
+   ```
 
-The easiest way to get started is using Claude Desktop with the following configuration:
+2. Install dependencies using uv (recommended):
+   ```bash
+   uv venv
+   uv pip install -r requirements.txt
+   ```
+
+3. Configure the server (see [Configuration](#configuration) section below)
+
+#### Register with Claude Desktop
+
+Add the following config to your `claude_desktop_config.json`:
 
 ```json
 {
@@ -59,22 +75,6 @@ The easiest way to get started is using Claude Desktop with the following config
   }
 }
 ```
-
-#### Manual Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/heiths/orkl_mcp_server.git
-   cd orkl_mcp_server
-   ```
-
-2. Install dependencies using uv (recommended):
-   ```bash
-   uv venv
-   uv pip install -r requirements.txt
-   ```
-
-3. Configure the server (see [Configuration](#configuration) section below)
 
 ## MCP Tools
 
@@ -102,8 +102,6 @@ The server provides these MCP Resources:
 
 ## Example Prompts
 
-Here are some example prompts you can use with Claude or other MCP-compatible assistants:
-
 ### Malware Investigation
 
 >I found a suspicious file with SHA1 hash '5f2b7f47b2c9da342583c3a7e3887b4babad0fa9'. Can you check if this hash is
@@ -118,7 +116,7 @@ Here are some example prompts you can use with Claude or other MCP-compatible as
 
 Configuration can be provided through:
 
-1. Environment variables (preferred)
+1. Environment variables
 2. A JSON configuration file (`config.json` in the current directory)
 
 ### Environment Variables
