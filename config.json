@@ -1,0 +1,12 @@
+{
+  "api_base_url": "https://orkl.eu/api/v1",
+  "request_timeout": 30,
+  "cache": {
+    "enable": true,
+    "ttl": 300
+  },
+  "rate_limit": {
+    "requests_per_window": 90,
+    "window_seconds": 30
+  }
+}
